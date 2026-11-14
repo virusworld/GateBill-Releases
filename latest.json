@@ -1,0 +1,13 @@
+﻿{
+  "appName": "GateBill",
+  "version": "1.0.1",
+  "buildDate": "2026-11-14",
+  "downloadUrl": "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.1/GateBill.exe",
+  "sha256": "724cf87157e06b2e235a8a13c41820fe5efc9b2b217be34c56fe9a169a2c0fb1",
+  "sizeBytes": 51486720,
+  "highlights": "Renewal transactions report, supplier prepaid guard fix, first-run setup, mobile subscription fixes",
+  "changes": [
+    "Maintenance and stability update",
+    "Renewal transactions report, supplier prepaid guard fix, first-run setup, mobile subscription fixes"
+  ]
+}
