@@ -3,7 +3,7 @@
     "releaseDate":  "2026-11-14",
     "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.1/GateBill.exe",
     "size":  52076544,
-    "sha256":  "5d8dc864db78a8508faed431f264d53ecfe4920c1e78d5a55fa85e025019043c",
+    "sha256":  "31567c9389a09aa0c33b8eb1f2e50188ac1e2e523162614e1ff4b1eded34fc20",
     "highlights":  "Renewal transactions report, supplier prepaid guard fix, first-run setup, mobile subscription fixes",
     "changes":  [
                     "Maintenance and stability update",
