@@ -1,12 +1,14 @@
 ﻿{
-    "version":  "1.0.1",
-    "releaseDate":  "2026-11-14",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.1/GateBill.exe",
-    "size":  52076544,
-    "sha256":  "31567c9389a09aa0c33b8eb1f2e50188ac1e2e523162614e1ff4b1eded34fc20",
-    "highlights":  "Renewal transactions report, supplier prepaid guard fix, first-run setup, mobile subscription fixes",
+    "version":  "1.0.2",
+    "releaseDate":  "2026-11-15",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.2/GateBill.exe",
+    "size":  52110848,
+    "sha256":  "d1ab2de1e191e893106b5413637f1cb6123755d69c898338649db5dfb8fa13c9",
+    "highlights":  "PROradius bulk renewal synchronization \u0026 JSON unmarshaling resilience",
     "changes":  [
                     "Maintenance and stability update",
-                    "Renewal transactions report, supplier prepaid guard fix, first-run setup, mobile subscription fixes"
+                    "Fixed PROradius bulk renewcheck JSON unmarshaling when services are returned as an associative map/object",
+                    "Added polymorphic unmarshaling for renewal results and bulk actions supporting both array and dictionary responses",
+                    "Hardened price, service_id, and boolean type handling across PROradius appliance responses"
                 ]
 }
