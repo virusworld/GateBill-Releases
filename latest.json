@@ -1,14 +1,17 @@
 ﻿{
-    "version":  "1.0.2",
+    "version":  "1.0.3",
     "releaseDate":  "2026-11-15",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.2/GateBill.exe",
-    "size":  52110848,
-    "sha256":  "d1ab2de1e191e893106b5413637f1cb6123755d69c898338649db5dfb8fa13c9",
-    "highlights":  "PROradius bulk renewal synchronization \u0026 JSON unmarshaling resilience",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.3/GateBill.exe",
+    "size":  52177920,
+    "sha256":  "6d13d604f91736f788e8b89c51ec345c4f819a26a77f8a3c849b8548ab14fed4",
+    "highlights":  "Role permission templates, role cloning, internet supplier wallet sync \u0026 PWA cache hardening",
     "changes":  [
                     "Maintenance and stability update",
-                    "Fixed PROradius bulk renewcheck JSON unmarshaling when services are returned as an associative map/object",
-                    "Added polymorphic unmarshaling for renewal results and bulk actions supporting both array and dictionary responses",
-                    "Hardened price, service_id, and boolean type handling across PROradius appliance responses"
+                    "Default Role Permission Presets: 7 curated ISP templates (Collector, Accountant, Support/NOC, Sales, Warehouse, Operations Supervisor, Auditor)",
+                    "Role Creation \u0026 Cloning: Add Role drawer with template/role selection, clone quick-action, and create-and-edit flow",
+                    "Permission Quick Populate: Merge or Replace permissions from templates or existing roles with privilege-escalation safety",
+                    "Internet Suppliers: Default payment method set to cash, live prepaid/owed balance display, and direct balance sync to AAA wallet",
+                    "PWA \u0026 Service Worker Hardening: no-cache, must-revalidate headers for sw.js/manifest/index.html to eliminate stale precache 404s",
+                    "Dashboard RBAC: Granular permission gating for Business Health and Renewal Forecast widgets"
                 ]
 }
