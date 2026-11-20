@@ -1,17 +1,16 @@
 ﻿{
-    "version":  "1.0.3",
-    "releaseDate":  "2026-11-15",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.3/GateBill.exe",
-    "size":  52178944,
-    "sha256":  "8659fa32b0490a28d35a8c4c08a666d6a3a9785a898eeb77dc090a4c6e86dd13",
-    "highlights":  "Role permission templates, role cloning, internet supplier wallet sync \u0026 PWA cache hardening",
+    "version":  "1.0.4",
+    "releaseDate":  "2026-11-20",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.4/GateBill.exe",
+    "size":  52552192,
+    "sha256":  "59a3a2c75b55a2de417d0fb51268ebc6d71c99145d303e1f45bb16290835d3c0",
+    "highlights":  "Customer Self-Service Portal \u0026 Collector End-of-Day Reconciliation",
     "changes":  [
                     "Maintenance and stability update",
-                    "Default Role Permission Presets: 7 curated ISP templates (Collector, Accountant, Support/NOC, Sales, Warehouse, Operations Supervisor, Auditor)",
-                    "Role Creation \u0026 Cloning: Add Role drawer with template/role selection, clone quick-action, and create-and-edit flow",
-                    "Permission Quick Populate: Merge or Replace permissions from templates or existing roles with privilege-escalation safety",
-                    "Internet Suppliers: Default payment method set to cash, live prepaid/owed balance display, and direct balance sync to AAA wallet",
-                    "PWA \u0026 Service Worker Hardening: no-cache, must-revalidate headers for sw.js/manifest/index.html to eliminate stale precache 404s",
-                    "Dashboard RBAC: Granular permission gating for Business Health and Renewal Forecast widgets"
+                    "Customer Self-Service Portal: Separate customer authentication via WhatsApp/SMS OTP and password, customer-scoped JWT tokens, live plan tracking, FUP quota meter, daily MB breakdown, invoices \u0026 payments history, statement ledger, and support tickets with reply conversations",
+                    "Collector End-of-Day Cash Summary (Bug #115): End-of-day daily reconciliation endpoints (/collectors/me/day-summary and /collectors/:id/day-summary), interactive shift date navigator, multi-currency collections, discount tracking, and unhanded cash calculations",
+                    "Thermal 80mm Handover Slip: Printable 80mm thermal receipt slip for cash envelope verification with dual signature blocks",
+                    "Receipt Collection Date Filters: Added paid_from and paid_to filters and paid_at timestamps to receipts query for accurate collection reporting",
+                    "Staff Customer Portal Controls: In-drawer portal access toggle, password setting, link copying, and direct WhatsApp invite"
                 ]
 }
