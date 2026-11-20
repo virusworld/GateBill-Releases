@@ -1,16 +1,17 @@
 ﻿{
-    "version":  "1.0.4",
+    "version":  "1.0.5",
     "releaseDate":  "2026-11-20",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.4/GateBill.exe",
-    "size":  52552192,
-    "sha256":  "b1935a9a3800e054b4f5e90e7209ba3db4096cb99e2818a9c36563d6b258df8d",
-    "highlights":  "Customer Self-Service Portal \u0026 Collector End-of-Day Reconciliation",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.0.5/GateBill.exe",
+    "size":  52801024,
+    "sha256":  "71d018a46e808e7106c0d08272ddbe36ed1919e46c04560518e54ecac77a9fd6",
+    "highlights":  "Customer Portal Settings Hub, OAuth \u0026 Session Management",
     "changes":  [
                     "Maintenance and stability update",
-                    "Customer Self-Service Portal: Separate customer authentication via WhatsApp/SMS OTP and password, customer-scoped JWT tokens, live plan tracking, FUP quota meter, daily MB breakdown, invoices \u0026 payments history, statement ledger, and support tickets with reply conversations",
-                    "Collector End-of-Day Cash Summary (Bug #115): End-of-day daily reconciliation endpoints (/collectors/me/day-summary and /collectors/:id/day-summary), interactive shift date navigator, multi-currency collections, discount tracking, and unhanded cash calculations",
-                    "Thermal 80mm Handover Slip: Printable 80mm thermal receipt slip for cash envelope verification with dual signature blocks",
-                    "Receipt Collection Date Filters: Added paid_from and paid_to filters and paid_at timestamps to receipts query for accurate collection reporting",
-                    "Staff Customer Portal Controls: In-drawer portal access toggle, password setting, link copying, and direct WhatsApp invite"
+                    "Customer Portal Settings Hub: Dedicated settings hub card (/settings/customer-portal) with granular controls for portal access, delivery channels, and session policies",
+                    "Multi-Channel OTP Delivery: Select default OTP channel (WhatsApp or SMS) with real-time gateway readiness checks and automatic fallback to SMS",
+                    "Google Sign-In \u0026 Social Identity: Fast one-click customer authentication with Google OAuth2 ID token verification, email auto-linking, and account management",
+                    "Subscriber Account \u0026 Session Telemetry: Comprehensive subscriber overview (IP address, user-agent device info, session duration, and live session counts)",
+                    "Remote Session Revocation \u0026 Password Reset: One-click session termination (Unauthenticate), bulk session revocation (Sign Out Everywhere), and portal password resets",
+                    "Route \u0026 Middleware Hardening: Fixed Fiber route prefix overlap between staff admin (/customer-portal-admin) and customer portal (/portal)"
                 ]
 }
