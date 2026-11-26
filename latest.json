@@ -1,14 +1,17 @@
 ﻿{
-    "version":  "1.1.1",
+    "version":  "1.1.2",
     "releaseDate":  "2026-11-26",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.1/GateBill.exe",
-    "size":  52868096,
-    "sha256":  "590cac3be184a47802c40f202a993f2d97255a23a3a4b587e3c9064d3c476306",
-    "highlights":  "Per-Company Public URL for Receipt QR Links \u0026 Automatic Public Receipt PDF Generation",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.2/GateBill.exe",
+    "size":  52894208,
+    "sha256":  "42c225e7b3bd99cd6af47567319c89bcbd772c4d924c13ff4cf4e38553406427",
+    "highlights":  "Transactional Ledger \u0026 Multi-Currency Supplier Payments, Shared Safe Helpers, Bounded PDF Renderer \u0026 Lazy Admin Tools",
     "changes":  [
                     "Maintenance and stability update",
-                    "Per-Company Public URL Setting: Added Public URL (Domain / QR Links) in Settings â†’ General (e.g. https://gatebill.codecore.pro) with validation and automatic fallback to the server\u0027s PUBLIC_URL / local IP",
-                    "Automatic Public Receipt PDF Generation: Viewing or paying a receipt now automatically renders and saves its public PDF copy (/r/\u003ctoken\u003e) in the background so QR codes work even for receipts never sent via WhatsApp",
-                    "Automatic QR Cache Refresh: Changing the company Public URL clears cached public receipt PDFs so subsequent views render with the updated domain QR code"
+                    "Transactional Ledger \u0026 Multi-Currency Supplier Payments, Shared Safe Helpers, Bounded PDF Renderer \u0026 Lazy Admin Tools",
+                    "Transactional Internet \u0026 Regular Supplier Payments: Wrapped RecordPayment, DeletePayment, and PaySupplier in atomic DB transactions with FOR UPDATE safe/counter locking, proper foreign-currency conversion via ledger.ResolveRateToBase, and base-USD supplier balance adjustments",
+                    "Unified Safe \u0026 Ledger Mutation Helpers: Added ResolveRateToBase, ConvertToBase, WithdrawSafe, and DepositSafe in pkg/ledger and migrated supplier payments, collector handovers, direct customer payments, and receipts to atomic SQL balance updates",
+                    "Bounded Headless Browser PDF Concurrency: Added a server-wide concurrency semaphore in RenderReceiptViewPDF (max 2 concurrent headless Chromium/Edge renders) to prevent CPU/RAM spikes during bulk receipt views or payments",
+                    "Notification Outbox \u0026 Cron Hardening: Typed ScheduledAt and MaxRetries in EnqueueNotificationItem (defaulting max_retries to 3 for expiry reminders) and scoped settings BulkUpdate key lookups per company",
+                    "Frontend Performance \u0026 UX Polish: Lazy-loaded all 9 AdminTools sub-tabs with React.lazy + Suspense, synced Collection Date display on mobile receipt cards, and cleaned up case-colliding locale keys"
                 ]
 }
