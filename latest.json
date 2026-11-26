@@ -1,17 +1,20 @@
 ﻿{
-    "version":  "1.1.2",
+    "version":  "1.1.3",
     "releaseDate":  "2026-11-26",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.2/GateBill.exe",
-    "size":  52894208,
-    "sha256":  "42c225e7b3bd99cd6af47567319c89bcbd772c4d924c13ff4cf4e38553406427",
-    "highlights":  "Transactional Ledger \u0026 Multi-Currency Supplier Payments, Shared Safe Helpers, Bounded PDF Renderer \u0026 Lazy Admin Tools",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.3/GateBill.exe",
+    "size":  52967936,
+    "sha256":  "1ed907bcbec45990d80d33662de99a686f5700d3542b62c8dea35aec422cf245",
+    "highlights":  "Round-2 Deep Audit \u0026 Ledger Hardening: Multi-Currency Supplier AP \u0026 Statements, Unverified Handover Reversals, Supplier Payment Voids, and 100% Locale Parity",
     "changes":  [
                     "Maintenance and stability update",
-                    "Transactional Ledger \u0026 Multi-Currency Supplier Payments, Shared Safe Helpers, Bounded PDF Renderer \u0026 Lazy Admin Tools",
-                    "Transactional Internet \u0026 Regular Supplier Payments: Wrapped RecordPayment, DeletePayment, and PaySupplier in atomic DB transactions with FOR UPDATE safe/counter locking, proper foreign-currency conversion via ledger.ResolveRateToBase, and base-USD supplier balance adjustments",
-                    "Unified Safe \u0026 Ledger Mutation Helpers: Added ResolveRateToBase, ConvertToBase, WithdrawSafe, and DepositSafe in pkg/ledger and migrated supplier payments, collector handovers, direct customer payments, and receipts to atomic SQL balance updates",
-                    "Bounded Headless Browser PDF Concurrency: Added a server-wide concurrency semaphore in RenderReceiptViewPDF (max 2 concurrent headless Chromium/Edge renders) to prevent CPU/RAM spikes during bulk receipt views or payments",
-                    "Notification Outbox \u0026 Cron Hardening: Typed ScheduledAt and MaxRetries in EnqueueNotificationItem (defaulting max_retries to 3 for expiry reminders) and scoped settings BulkUpdate key lookups per company",
-                    "Frontend Performance \u0026 UX Polish: Lazy-loaded all 9 AdminTools sub-tabs with React.lazy + Suspense, synced Collection Date display on mobile receipt cards, and cleaned up case-colliding locale keys"
+                    "Round-2 Deep Audit \u0026 Ledger Hardening: Multi-Currency Supplier AP \u0026 Statements, Unverified Handover Reversals, Supplier Payment Voids, and 100% Locale Parity",
+                    "Change Service Contract \u0026 Portal Password Fixes (BUG-08, BUG-09): Aligned service_id / new_service_id contract in subscriptions, and added current_password verification and UI in customer portal profile",
+                    "Multi-Currency Supplier AP \u0026 Statement Overhaul (BUG-10, ENH-09): Standardized purchases, purchase returns, and supplier debit notes on base-currency supplier balances, and added dual-currency display (original + base) with clickable linked PO references",
+                    "FX Rate Override Normalization \u0026 Renewal Lock (BUG-11, BUG-12): Migrated foreign exchange overrides across purchases, expenses, returns, and debit notes to ledger.ResolveRateToBase, and added FOR UPDATE stock checks for promotion rewards",
+                    "Tenant Isolation \u0026 Transactional Sequences (BUG-13, BUG-15): Enforced company_id isolation across portal admin bulk actions and customer overwrites, and wrapped sequence counters inside database transactions",
+                    "Customer Portal Statement \u0026 Tickets Polish (BUG-14, BUG-16, BUG-18): Included issued credit notes in statements with per-currency grouping, executed ticket updated_at timestamps, added empty states, error toasts, dynamic status badges, and OTP timer cleanup",
+                    "SQLC Named Date \u0026 100% Locale Parity (BUG-17, BUG-19): Eliminated the last unnamed ColumnN SQLC parameter and added all missing Arabic and English pluralization and portal keys",
+                    "Unverified Handover \u0026 Supplier Payment Reversals (ENH-06, ENH-07): Added DELETE endpoints and UI actions to reject unverified collector handovers and void supplier payments with full GL reversal and safe balance refunds",
+                    "Unified pkg/ledger Safe Helpers (ENH-08): Migrated all remaining local safe helpers across expenses, purchases, invoices, and returns to atomic ledger.WithdrawSafe / DepositSafe"
                 ]
 }
