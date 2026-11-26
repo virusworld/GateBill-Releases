@@ -1,17 +1,14 @@
 ﻿{
-    "version":  "1.1.0",
+    "version":  "1.1.1",
     "releaseDate":  "2026-11-26",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.0/GateBill.exe",
-    "size":  52860416,
-    "sha256":  "7566369dba6f5aaa572d2b9e70395c614c16a8a2139df5d960b079f30ec1cb67",
-    "highlights":  "Massive UI Overhaul with 3-Way Navigation, Command Palette \u0026 Stability Fixes",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.1/GateBill.exe",
+    "size":  52868096,
+    "sha256":  "590cac3be184a47802c40f202a993f2d97255a23a3a4b587e3c9064d3c476306",
+    "highlights":  "Per-Company Public URL for Receipt QR Links \u0026 Automatic Public Receipt PDF Generation",
     "changes":  [
                     "Maintenance and stability update",
-                    "3-Way Navigation System: Switch seamlessly between Rail + Panel, Top Navigation Bar, and Orbital Navigation modes with per-user saved preferences",
-                    "Global Command Palette: Instant keyboard-driven navigation and quick actions across all GateBill modules",
-                    "Refreshed Design System: Overhauled Topbar, DataTable, SideDrawer, forms, and responsive mobile/dark-mode polish across the application",
-                    "Customer Portal Subscription Usage Fix: Resolved 404 error when fetching usage for unlimited plans with NULL FUP limits",
-                    "Internet Suppliers Balance Polish: Cleaner prepaid credit formatting (no leading \u0027+\u0027 sign) and prominent light-red badges for negative owed balances",
-                    "Build \u0026 Database Scripts: Improved embedded migrations staging in build_embed.bat and squashed schema initialization"
+                    "Per-Company Public URL Setting: Added Public URL (Domain / QR Links) in Settings â†’ General (e.g. https://gatebill.codecore.pro) with validation and automatic fallback to the server\u0027s PUBLIC_URL / local IP",
+                    "Automatic Public Receipt PDF Generation: Viewing or paying a receipt now automatically renders and saves its public PDF copy (/r/\u003ctoken\u003e) in the background so QR codes work even for receipts never sent via WhatsApp",
+                    "Automatic QR Cache Refresh: Changing the company Public URL clears cached public receipt PDFs so subsequent views render with the updated domain QR code"
                 ]
 }
