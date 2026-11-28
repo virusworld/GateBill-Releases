@@ -1,20 +1,16 @@
 ﻿{
-    "version":  "1.1.3",
-    "releaseDate":  "2026-11-26",
-    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.3/GateBill.exe",
-    "size":  52967936,
-    "sha256":  "1ed907bcbec45990d80d33662de99a686f5700d3542b62c8dea35aec422cf245",
-    "highlights":  "Round-2 Deep Audit \u0026 Ledger Hardening: Multi-Currency Supplier AP \u0026 Statements, Unverified Handover Reversals, Supplier Payment Voids, and 100% Locale Parity",
+    "version":  "1.1.4",
+    "releaseDate":  "2026-11-28",
+    "downloadUrl":  "https://github.com/virusworld/GateBill-Releases/releases/download/v1.1.4/GateBill.exe",
+    "size":  52994048,
+    "sha256":  "b195611890be2db69a0e45a182cd2fdae4f9c16ad7163401602b90b5e1a65b28",
+    "highlights":  "Company Timezone Day Boundaries, Audit Log Filters, and 4xx Input Error Mapping",
     "changes":  [
                     "Maintenance and stability update",
-                    "Round-2 Deep Audit \u0026 Ledger Hardening: Multi-Currency Supplier AP \u0026 Statements, Unverified Handover Reversals, Supplier Payment Voids, and 100% Locale Parity",
-                    "Change Service Contract \u0026 Portal Password Fixes (BUG-08, BUG-09): Aligned service_id / new_service_id contract in subscriptions, and added current_password verification and UI in customer portal profile",
-                    "Multi-Currency Supplier AP \u0026 Statement Overhaul (BUG-10, ENH-09): Standardized purchases, purchase returns, and supplier debit notes on base-currency supplier balances, and added dual-currency display (original + base) with clickable linked PO references",
-                    "FX Rate Override Normalization \u0026 Renewal Lock (BUG-11, BUG-12): Migrated foreign exchange overrides across purchases, expenses, returns, and debit notes to ledger.ResolveRateToBase, and added FOR UPDATE stock checks for promotion rewards",
-                    "Tenant Isolation \u0026 Transactional Sequences (BUG-13, BUG-15): Enforced company_id isolation across portal admin bulk actions and customer overwrites, and wrapped sequence counters inside database transactions",
-                    "Customer Portal Statement \u0026 Tickets Polish (BUG-14, BUG-16, BUG-18): Included issued credit notes in statements with per-currency grouping, executed ticket updated_at timestamps, added empty states, error toasts, dynamic status badges, and OTP timer cleanup",
-                    "SQLC Named Date \u0026 100% Locale Parity (BUG-17, BUG-19): Eliminated the last unnamed ColumnN SQLC parameter and added all missing Arabic and English pluralization and portal keys",
-                    "Unverified Handover \u0026 Supplier Payment Reversals (ENH-06, ENH-07): Added DELETE endpoints and UI actions to reject unverified collector handovers and void supplier payments with full GL reversal and safe balance refunds",
-                    "Unified pkg/ledger Safe Helpers (ENH-08): Migrated all remaining local safe helpers across expenses, purchases, invoices, and returns to atomic ledger.WithdrawSafe / DepositSafe"
+                    "Company Timezone Day Boundaries, Audit Log Filters, and 4xx Input Error Mapping",
+                    "Company Timezone Day Boundaries (Bug #127): Added database migration 000002 with company_today(), company_date(), and company_day_start_utc() SQL helpers reading company timezone setting (default Asia/Beirut) and migrated all 41 CURRENT_DATE queries across queries.sql (expiry filters, renewal forecast, aging, and month-to-date trends)",
+                    "Audit Log Filters \u0026 Paging Resilience (Bug #128): Fixed audit logs main query by replacing non-existent u.is_active with u.status::text = \u0027active\u0027, cast all SQL parameters, clamped pagination limits (1..1000) and offset (\u003e= 0), stripped NUL bytes from search, and returned 404 for non-existent audit logs",
+                    "Safe Input Error Mapping \u0026 Validation (Bug #129): Added pkg/httperr middleware RejectNUL returning 400 for NUL characters in queries or JSON payloads, mapped SQLSTATE constraint errors (22001, 23502, 23505) to 400/409/404 across 11 entity handlers, validated status enum filters, enforced required customer_id and date on invoices, and defaulted zone is_active to true",
+                    "Frontend Documentation \u0026 Security Tab Polish: Merged bug testing documentation (bug-testing-before-launch.md) and improved date formatting for security logs"
                 ]
 }
